@@ -16,6 +16,14 @@ public class HomeController {
 	public String getCity() {
 		return "City";
 	}
+	
+	
+	
+	@GetMapping
+	public String getAge() {
+		return "Age";
+	}
+
 
 
 }
