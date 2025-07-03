@@ -9,6 +9,7 @@ public class Application {
 	public static void main(String[] args) {
 
 		// hello i'm git main branch
+		System.out.println("vijay");
 		SpringApplication.run(Application.class, args);
 	}
 
