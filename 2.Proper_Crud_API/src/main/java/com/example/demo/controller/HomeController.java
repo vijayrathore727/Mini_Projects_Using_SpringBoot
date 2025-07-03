@@ -11,4 +11,9 @@ public class HomeController {
 		return "Name";
 	}
 
+@postMapping
+	public String saveRecord() {
+		return "Name";
+	}
+
 }
