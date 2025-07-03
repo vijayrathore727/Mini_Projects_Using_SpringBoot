@@ -11,4 +11,11 @@ public class HomeController {
 		return "Name";
 	}
 
+	
+	@GetMapping
+	public String getCity() {
+		return "City";
+	}
+
+
 }
