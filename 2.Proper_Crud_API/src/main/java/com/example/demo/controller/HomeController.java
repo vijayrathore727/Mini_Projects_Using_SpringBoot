@@ -23,6 +23,10 @@ public class HomeController {
 	public String getAge() {
 		return "Age";
 	}
+@PostMapping
+public String showRecord() {
+	return "Name";
+}
 
 
 
