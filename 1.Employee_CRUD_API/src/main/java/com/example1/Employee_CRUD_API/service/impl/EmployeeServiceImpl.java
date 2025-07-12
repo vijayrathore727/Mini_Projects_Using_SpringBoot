@@ -17,21 +17,24 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Autowired
     private EmployeeRepository repository;
 
+    // Create Record
     @Override
     public Employee create(Employee employee) {
         return repository.save(employee);
     }
 
+    // Read Record
     @Override
     public List<Employee> getAll() {
         return repository.findAll();
     }
-
+     // fatch Record By Id
     @Override
     public Optional<Employee> getById(String id) {
         return repository.findById(id);
     }
 
+    // Update Record By Id
     @Override
     public Employee update(String id, Employee employee) {
         Employee existing = repository.findById(id)
@@ -43,6 +46,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         return repository.save(existing);
     }
 
+    // Delete Record By Id
     @Override
     public void delete(String id) {
         if (!repository.existsById(id)) {

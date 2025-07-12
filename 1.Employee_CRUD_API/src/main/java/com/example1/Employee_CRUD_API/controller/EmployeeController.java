@@ -16,18 +16,19 @@ public class EmployeeController {
     @Autowired
     private EmployeeService service;
 
+    // Create Record
     @PostMapping
     public ResponseEntity<ApiResponse<Employee>> create(@RequestBody Employee employee) {
         System.out.println(employee);
         Employee saved = service.create(employee);
         return ResponseEntity.ok(new ApiResponse<>(200, "Employee created", saved));
     }
-
+    // show Record
     @GetMapping
     public ResponseEntity<ApiResponse<List<Employee>>> getAll() {
         return ResponseEntity.ok(new ApiResponse<>(200, "All employees", service.getAll()));
     }
-
+    // show Record by id
     @GetMapping("/{id}")
     public ResponseEntity<ApiResponse<Employee>> getById(@PathVariable String  id) {
         return service.getById(id)
@@ -35,12 +36,15 @@ public class EmployeeController {
                 .orElse(ResponseEntity.status(404).body(new ApiResponse<>(404, "Employee not found", null)));
     }
 
+      // Update Record
     @PutMapping("/{id}")
     public ResponseEntity<ApiResponse<Employee>> update(@PathVariable String id, @RequestBody Employee employee) {
         Employee updated = service.update(id, employee);
         return ResponseEntity.ok(new ApiResponse<>(200, "Employee updated", updated));
     }
 
+
+    // Delete Record By Id
     @DeleteMapping("/{id}")
     public ResponseEntity<ApiResponse<String>> delete(@PathVariable String id) {
         service.delete(id);
