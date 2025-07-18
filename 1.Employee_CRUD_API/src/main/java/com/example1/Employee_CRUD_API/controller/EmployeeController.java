@@ -46,4 +46,11 @@ public class EmployeeController {
         service.delete(id);
         return ResponseEntity.ok(new ApiResponse<>(200, "Employee deleted", "Deleted ID: " + id));
     }
+
+
+    // mrtho by Jaya
+
+    public String getName(){
+        return "Jaya";
+    }
 }
