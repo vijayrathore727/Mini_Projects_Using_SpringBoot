@@ -13,6 +13,8 @@ import java.util.List;
 @RequestMapping("/api/employees")
 public class EmployeeController {
 
+
+    // this is jaya branch
     @Autowired
     private EmployeeService service;
 
@@ -49,5 +51,11 @@ public class EmployeeController {
     public ResponseEntity<ApiResponse<String>> delete(@PathVariable String id) {
         service.delete(id);
         return ResponseEntity.ok(new ApiResponse<>(200, "Employee deleted", "Deleted ID: " + id));
+    }
+
+    //method add by jaya
+
+    public void add(int a, int b){
+        int c= a+b ;
     }
 }
