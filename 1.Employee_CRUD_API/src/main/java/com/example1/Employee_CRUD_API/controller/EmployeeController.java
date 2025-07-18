@@ -48,4 +48,10 @@ public class EmployeeController {
         service.delete(id);
         return ResponseEntity.ok(new ApiResponse<>(200, "Employee deleted", "Deleted ID: " + id));
     }
+
+    //method add by jaya
+
+    public void add(int a, int b){
+        int c= a+b ;
+    }
 }
