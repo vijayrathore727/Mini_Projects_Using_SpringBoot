@@ -28,6 +28,8 @@ public class EmployeeController {
         return ResponseEntity.ok(new ApiResponse<>(200, "All employees", service.getAll()));
     }
 
+    //this is method
+
     @GetMapping("/{id}")
     public ResponseEntity<ApiResponse<Employee>> getById(@PathVariable String  id) {
         return service.getById(id)
