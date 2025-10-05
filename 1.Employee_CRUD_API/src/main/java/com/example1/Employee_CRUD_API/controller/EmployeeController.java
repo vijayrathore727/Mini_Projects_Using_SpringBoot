@@ -40,7 +40,9 @@ public class EmployeeController {
         Employee updated = service.update(id, employee);
         return ResponseEntity.ok(new ApiResponse<>(200, "Employee updated", updated));
     }
-
+/*  public void(){
+}
+ */
     @DeleteMapping("/{id}")
     public ResponseEntity<ApiResponse<String>> delete(@PathVariable String id) {
         service.delete(id);
